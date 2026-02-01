@@ -2852,3 +2852,7 @@ ol {
 		padding: 14px 30px 12px;
 	}
 }
+
+.footer__logo > a > img {
+	max-height: 5rem;
+}
