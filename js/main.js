@@ -91,9 +91,9 @@
     /*------------------
 		Magnific
 	--------------------*/
-    $('.video-popup').magnificPopup({
-        type: 'iframe'
-    });
+    // $('.video-popup').magnificPopup({
+    //     type: 'iframe'
+    // });
 
     $('.image-popup').magnificPopup({
         type: 'image'
@@ -110,5 +110,12 @@
     $(".datepicker").datepicker({
         minDate: 0
     });
+
+
+    /*-------------------
+        Skinperfect
+	--------------------- */
+
+    $.getScript("js/skinperfect.js")
 
 })(jQuery);

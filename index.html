@@ -39,7 +39,7 @@
         </div>
         <div id="mobile-menu-wrap"></div>
         <div class="offcanvas__btn">
-            <a href="#" class="primary-btn">Appointment</a>
+            <a href="/#consultation__form" class="primary-btn">Appointment</a>
         </div>
         <ul class="offcanvas__widget">
             <li><i class="fa fa-phone"></i> +91 9490903999</li>
@@ -104,7 +104,7 @@
                             </ul>
                         </nav>
                         <div class="header__btn">
-                            <a href="#" class="primary-btn">Appointment</a>
+                            <a href="/#consultation__form" class="primary-btn">Appointment</a>
                         </div>
                     </div>
                 </div>
@@ -124,7 +124,7 @@
                     <div class="hero__text">
                         <span>Expert Skin Care </span>
                         <h2>Take the Advanced Treatment with Global Standards</h2>
-                        <a href="#" class="primary-btn normal-btn">Contact us</a>
+                        <a class="x-contact-us primary-btn normal-btn">Contact us</a>
                     </div>
                 </div>
             </div>
@@ -137,24 +137,19 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
-                    <div class="consultation__form">
+                    <div class="consultation__form" id="consultation__form">
                         <div class="section-title">
                             <span>REQUEST FOR YOUR</span>
                             <h2>Consultation</h2>
                         </div>
-                        <form action="#">
-                            <input type="text" placeholder="Name">
-                            <input type="text" placeholder="Email">
-                            <div class="datepicker__item">
-                                <input type="text" placeholder="Date" class="datepicker">
-                                <i class="fa fa-calendar"></i>
-                            </div>
-                            <select>
-                                <option value="">Type of service</option>
-                                <option value="">Advanced equipment</option>
-                                <option value="">Qualified doctors</option>
-                                <option value="">Certified services</option>
-                                <option value="">Emergency care</option>
+                        <form id="consultation-form">
+                            <input type="text" name="name" placeholder="Name">
+                            <input type="text" name="phone" placeholder="Phone Number">
+                            <input type="date" placeholder="Date" name="date">
+                            <select name="gender">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Transgender">Tansgender</option>
                             </select>
                             <button type="submit" class="site-btn">Book appoitment</button>
                         </form>
@@ -179,7 +174,7 @@ Your journey to healthy, confident, and radiant skin begins here.</p>
                             </div>
                             <div class="col-lg-6 col-md-6">
                                 <div class="consultation__video set-bg" data-setbg="img/consultation-video.jpg">
-                                    <a href="https://www.youtube.com/watch?v=PXsuI67s2AA" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                                    <a href="/player.html?vid=intro" class="play-btn video-popup"><i class="fa fa-play"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -247,7 +242,7 @@ Your journey to healthy, confident, and radiant skin begins here.</p>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="services__btn">
-                        <a href="#" class="primary-btn">Contact us</a>
+                        <a class="x-contact-us primary-btn">Contact us</a>
                     </div>
                 </div>
             </div>
@@ -450,14 +445,6 @@ Your journey to healthy, confident, and radiant skin begins here.</p>
                     <div class="col-lg-4 col-md-4">
                         <div class="footer__logo">
                             <a href="#"><img src="img/footer-logo.png" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-8">
-                        <div class="footer__newslatter">
-                            <form action="#">
-                                <input type="text" placeholder="Email">
-                                <button type="submit" class="site-btn">Subscribe</button>
-                            </form>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12">
