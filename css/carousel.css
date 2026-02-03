@@ -1,0 +1,56 @@
+@media (max-width: 500px) {
+  .carousel {
+    height: 45vh;
+  }
+
+  .carousel-cell img {
+    object-position: center;
+  }
+}
+@media (max-width: 500px) {
+  .carousel {
+    height: 45vh;
+  }
+
+  .carousel-cell video {
+    object-position: center;
+  }
+}
+
+.carousel {
+  background: #fff;
+}
+
+.carousel-cell {
+  width: 120vh;
+  height: 50vh;
+  margin-right: 25px;
+  background: #eff1f3;
+  counter-increment: gallery-cell;
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  /* content: counter(gallery-cell); */
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+/* Image MUST cover fully */
+.carousel-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* 🔥 MOST IMPORTANT */
+  object-position: right center; /* keeps subject on right */
+  display: block;
+}
+/* VIDEO FULL COVER */
+.carousel-cell video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;               /* 🔥 KEY */
+  object-position: right center;   /* subject stays right */
+  display: block;
+}
