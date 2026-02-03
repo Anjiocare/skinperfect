@@ -23,9 +23,9 @@
     });
 
     document.title = "Skin Perfect - Dermatology & Cosmetic clinic";
-    $("div.header__logo a img").attr("src", "img/main logo.png");
-    $("div.offcanvas__logo a img").attr("src", "img/main logo.png");
-    $("div.footer__logo a img").attr("src", "img/main logo.png");
+    $("div.header__logo a img").attr("src", "img/main_logo.png");
+    $("div.offcanvas__logo a img").attr("src", "img/main_logo.png");
+    $("div.footer__logo a img").attr("src", "img/main_logo.png");
 
     $("div.footer__social a i.fa-instagram")
         .closest("a")
