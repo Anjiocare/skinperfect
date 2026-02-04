@@ -86,9 +86,16 @@
         }
     });
 
-    // $('#offcanvas').load('partials/offcanvas.html');
-    // $('.header').load('partials/header.html');
-    debugger;
-    $('.footer').load('partials/footer.html');
+    loadContent('#offcanvas', 'partials/offcanvas.html');
+    loadContent('.header', 'partials/header.html');
+    loadContent('.footer', 'partials/footer.html');
+
+    async function loadContent(selector, url) {
+        const res = await fetch(url)
+        const body = await res.text();
+        for (const el of window.document.querySelectorAll(selector)) {
+            el.innerHTML = body;
+        }
+    }
 
 })(jQuery);
