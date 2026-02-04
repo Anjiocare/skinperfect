@@ -86,4 +86,9 @@
         }
     });
 
+    // $('#offcanvas').load('partials/offcanvas.html');
+    // $('.header').load('partials/header.html');
+    debugger;
+    $('.footer').load('partials/footer.html');
+
 })(jQuery);

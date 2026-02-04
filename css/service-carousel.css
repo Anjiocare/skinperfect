@@ -1,34 +1,30 @@
-@media (max-width: 768px) {
-
-  /* Wrapper of the image section */
-  .benefits-section,
-  .benefits-image,
-  .skincare-banner {
-    width: 100%;
-    overflow: hidden;
+@media (max-width: 500px) {
+  .carousel {
+    height: 45vh;
   }
 
-  /* The image itself */
-  .benefits-section img,
-  .benefits-image img,
-  .skincare-banner img {
-    width: 100%;
-    height: auto;        /* ✅ KEY FIX */
-    max-height: 60vh;    /* control mobile height */
-    object-fit: contain;/* show full image */
-    display: block;
+  .carousel-cell img {
+    object-position: center;
+  }
+}
+@media (max-width: 500px) {
+  .carousel {
+    height: 45vh;
   }
 
-
+  .carousel-cell video {
+    object-position: center;
+  }
+}
 
 .carousel {
   background: #fff;
 }
 
 .carousel-cell {
-  width: 170vh;
+  width: 160vh;
   height: 50vh;
-  margin-right: 20px;
+  margin-right: 26px;
   background: #eff1f3;
   counter-increment: gallery-cell;
 }
