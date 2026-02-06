@@ -87,7 +87,7 @@ p {
 .blog__hero__text p {
 	font-size: 18px;
 	line-height: 30px;
-	color: #000000;
+	color: #ffffff;
 	margin-bottom: 0;
 }
 
@@ -1934,6 +1934,7 @@ ol {
 .blog__details__hero {
 	padding: 200px 0;
 	margin-bottom: 60px;
+	backdrop-filter: brightness(0.5);
 }
 
 .blog__hero__text h2 {
