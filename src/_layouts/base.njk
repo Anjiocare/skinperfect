@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="{{ description or 'Skin Perfect Clinic' }}">
+  <meta name="keywords" content="{{ keywords or 'Dermatology, Cosmetic Clinic' }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>{{ title or "Skin Perfect - Dermatology & Cosmetic Clinic" }}</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/assets/css/flaticon.css">
+  <link rel="stylesheet" href="/assets/css/nice-select.css">
+  <link rel="stylesheet" href="/assets/css/jquery-ui.min.css">
+  <link rel="stylesheet" href="/assets/css/magnific-popup.css">
+  <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="/assets/css/slicknav.min.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/carousel.css">
+
+  <!-- Flickity -->
+  <link rel="stylesheet" href="/assets/flickity/flickity.css">
+  <script src="/assets/flickity/flickity.pkgd.min.js"></script>
+</head>
+
+<body>
+
+  <!-- Page Preloader -->
+  <div id="preloder">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Offcanvas Menu -->
+  {% include "offcanvas.njk" %}
+
+  <!-- Header -->
+  {% include "header.njk" %}
+
+  <!-- Page Content -->
+  <main>
+    {{ content | safe }}
+  </main>
+
+  <!-- Footer -->
+  {% include "footer.njk" %}
+
+  <!-- JS Plugins -->
+  <script src="/assets/js/jquery-3.3.1.min.js"></script>
+  <script src="/assets/js/bootstrap.min.js"></script>
+  <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+  <script src="/assets/js/masonry.pkgd.min.js"></script>
+  <script src="/assets/js/jquery-ui.min.js"></script>
+  <script src="/assets/js/jquery.nice-select.min.js"></script>
+  <script src="/assets/js/jquery.slicknav.js"></script>
+  <script src="/assets/js/owl.carousel.min.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/skinperfect.js"></script>
+
+</body>
+</html>

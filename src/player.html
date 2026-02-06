@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Video Player</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shaka-player/dist/controls.css">
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: #000;
+        }
+
+        #player-container {
+            width: 100%;
+            height: 100%;
+            background: #000;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            background: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="player-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/shaka-player/dist/shaka-player.compiled.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/shaka-player/dist/shaka-player.ui.js"></script>
+
+    <script>
+        function getVideoId() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get("vid");
+        }
+
+        function isSafeVideoId(vid) {
+            return /^[a-zA-Z0-9_-]+$/.test(vid);
+        }
+
+        async function start() {
+            const vid = getVideoId();
+            if (!vid || !isSafeVideoId(vid)) {
+                document.body.innerHTML =
+                    "<p style='color:white;padding:20px;font-family:sans-serif'>Invalid video id.</p>";
+                return;
+            }
+
+            const manifestUrl = `../assets/vid/${vid}/dash_av1/manifest.mpd`;
+
+            shaka.polyfill.installAll();
+
+            if (!shaka.Player.isBrowserSupported()) {
+                document.body.innerHTML =
+                    "<p style='color:white;padding:20px;font-family:sans-serif'>Browser not supported.</p>";
+                return;
+            }
+
+            // Create video element
+            const video = document.createElement("video");
+            video.autoplay = true;
+            video.controls = false; // Shaka UI provides controls
+            video.playsInline = true;
+            video.setAttribute("playsinline", "");
+            video.setAttribute("webkit-playsinline", "");
+
+            const container = document.getElementById("player-container");
+            container.appendChild(video);
+
+            // Create the core player
+            const player = new shaka.Player(video);
+
+            // Create UI overlay
+            const ui = new shaka.ui.Overlay(player, container, video);
+
+            // Configure UI (quality selector is inside overflow menu)
+            ui.configure({
+                controlPanelElements: [
+                    "play_pause",
+                    "time_and_duration",
+                    "spacer",
+                    "mute",
+                    "volume",
+                    "overflow_menu",
+                    "fullscreen"
+                ],
+                overflowMenuButtons: [
+                    "quality",
+                    "playback_rate"
+                ]
+            });
+
+            try {
+                await player.load(manifestUrl);
+                video.play().catch(() => { });
+            } catch (e) {
+                console.error(e);
+                document.body.innerHTML =
+                    "<p style='color:white;padding:20px;font-family:sans-serif'>Failed to load video.</p>";
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", start);
+    </script>
+</body>
+
+</html>
