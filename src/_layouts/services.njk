@@ -1,0 +1,36 @@
+---
+layout: base.njk
+---
+
+<!-- Breadcrumb Section Begin -->
+<section class="breadcrumb-option spad set-bg" data-setbg="/assets/img/breadcrumb-bg.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="breadcrumb__text">
+                    <h2>Our Services</h2>
+                    <div class="breadcrumb__links">
+                        <a href="/index/">Home</a>
+                        <span>Services</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Breadcrumb Section End -->
+
+<!-- Services Section Begin -->
+<section class="services-page spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 order-lg-2">
+                {{ content | safe}}
+            </div>
+            <div class="col-lg-4 order-lg-1">
+                {% include "services_sidebar.njk" %}
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Services Section End -->
