@@ -47,7 +47,7 @@
         <div class="row">
             <div class="col-lg-2">
                 <div class="header__logo">
-                    <a href="/"><img src="/assets/img/main_logo.png" alt=""></a>
+                    <a href="/"><img src="/assets/img/main_logo.png" alt="Skin Perfect Logo"></a>
                 </div>
             </div>
             <div class="col-lg-10">
@@ -57,13 +57,7 @@
                             <li class="{{ isActive('/index') }}"><a href="/">Home</a></li>
                             <li class="{{ isActive('/about') }}"><a href="/about/">About</a></li>
                             <li class="{{ isActive('/services') }}"><a href="/services/">Services</a></li>
-                            <li class="{{ isActiveAny(['/pricing', '/doctor', '/blog-details']) }}"><a href="#">Pages</a>
-                                <ul class="dropdown">
-                                    <li><a href="/pricing/">Pricing</a></li>
-                                    <li><a href="/doctor/">Doctor</a></li>
-                                    <li><a href="/blog-details/">Blog Details</a></li>
-                                </ul>
-                            </li>
+                            <li class="{{ isActive('/gallery') }}"><a href="/gallery/">Gallery</a></li>
                             <li class="{{ isActive('/blog') }}"><a href="/blog/">Blog</a></li>
                             <li class="{{ isActive('/contact') }}"><a href="/contact/">Contact</a></li>
                         </ul>
