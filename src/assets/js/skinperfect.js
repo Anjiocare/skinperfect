@@ -2,7 +2,7 @@
 
 (function ($) {
 
-    const PHONE_NUMBER = "919080236443"; // countrycode + number (no +)
+    const PHONE_NUMBER = "919490903999"; // countrycode + number (no +)
     const MESSAGE = "Hi! I need help";
     const WA_CONSULT_TEMPLATE = ({ name, phone, date, gender }) =>
         `Hi, I want a consultation.\n` +
