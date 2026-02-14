@@ -639,6 +639,10 @@ ol {
 	margin-bottom: 0;
 }
 
+.chooseus__item img {
+	filter: brightness(0.5);
+}
+
 /*---------------------
   Services
 -----------------------*/
